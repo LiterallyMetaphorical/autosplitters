@@ -448,7 +448,7 @@ isLoading
 {
     return current.gameState == 1
         || current.isInEndOfLevelScreen
-        || (current.gameState == 0 && settings["pause_on_main_menu"]);
+        || (current.gameState == 0);
 }
 
 start
@@ -505,4 +505,9 @@ split
     }
 
     return false;
+}
+
+exit
+{
+    timer.IsGameTimePaused = true;
 }
